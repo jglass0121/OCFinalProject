@@ -65,6 +65,6 @@
 ## 2-1. 팀원 소개
 | 구분 | 이준호 | 강민아 | 김광명 | 두별 | 전유진 |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| Role | Leader / Backend Developer | Frontend Developer | Frontend Developer | Backend Developer | Backend Developer | Backend Developer |
+| Role |  Backend Developer | Frontend Developer | Frontend Developer | Backend Developer | Backend Developer | Backend Developer |
 | GitHub | [rinklove](https://github.com/rinklove) | [mineii](https://github.com/mineii) | [asd45618](https://github.com/asd45618) | [edbyeol](https://github.com/edbyeol) | [jacomyou1026](https://github.com/jacomyou1026) |
 
