@@ -24,7 +24,7 @@ public class ShoppingMal {
     private String content;
     private String email;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "memberId")
     private Member member;
     private String shopName;
