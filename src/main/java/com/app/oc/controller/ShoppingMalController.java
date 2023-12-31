@@ -77,15 +77,17 @@ public class ShoppingMalController {
     }
 
     /**
+     * 개발자 : 전유진
      * Item 저장(+file) /- 등록 / 수정
      * OK
      */
     @PostMapping("/saveItem")
-    public ResultDto SaveItem(ItemFileRequestDto itemFileRequestDto) throws IOException {
-        // DB isert
+    public ResponseEntity<ResultDto> SaveItem(ItemFileRequestDto itemFileRequestDto) throws IOException {
+        //DB isert
         String name = itemService.saveItem(itemFileRequestDto);
-        return new ResultDto("상품이 " + name + "되었습니다.");
+        return ResponseEntity.ok(new ResultDto("상품이 "+name+"되었습니다."));
     }
+
 
     /**
      *
