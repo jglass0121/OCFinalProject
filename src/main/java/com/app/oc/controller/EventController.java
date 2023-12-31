@@ -67,11 +67,12 @@ public class EventController {
      * 폐점 전체 조회
      * 전체, 폐점 ,할인 A D C
      * buyer 구분
+     * 개발자 : 전유진
      */
     @GetMapping("/eventAll")
-    public ResponseeventDto responseeventDto(
+    public ResponseEntity<ResponseeventDto> responseeventDto(
             @RequestParam(defaultValue = "A", required = false, name = "state") String state, HttpSession session) {
-        return eventService.listAll(state, session);
+        return ResponseEntity.ok(eventService.listAll(state, session));
     }
 
     /**
