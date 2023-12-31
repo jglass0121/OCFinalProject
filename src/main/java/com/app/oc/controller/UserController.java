@@ -46,7 +46,7 @@ public class UserController {
      */
     @PostMapping("/login")
     public ResultDto login(@RequestBody LoginDto loginDto, HttpServletResponse response) {
-        Member findMember = memberService.findOne(loginDto.getId());
+        MemberDto findMember = memberService.findOne(loginDto.getId());
         if (!findMember.getPassword().equals(loginDto.getPwd())) {
             throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
         }
@@ -87,54 +87,65 @@ public class UserController {
         return new ResultDto("로그아웃되었습니다.");
     }
 
+
     /**
-     * 회원 조회
-     * 
+     * 개발자 : 전유진
+     *회원 조회
      * @param id : Member ID
      * @return
      *
-     *         OK
+     *
+     * OK
      */
     @GetMapping("/myPage")
-    public MyPageResponse findById(@SessionAttribute("id") String id) {
-        MyPageResponse myPageOne = memberService.findMyPageOne(id);
-        return myPageOne;
+    public ResponseEntity<MemberDto> findById(@CookieValue String id) {
+        return ResponseEntity.ok(memberService.findOne(id));
     }
+
 
     // 회원수정
 
+
     /**
-     * 회원 수정
-     * 
+     *
+     * 개발자 : 전유진
+     *회원 수정
      * @param id : Member ID
      * @return
      *
-     *         OK
+     * OK
      */
     @PutMapping("/myPage")
-    public ResultDto updateMember(@RequestBody ResponseMemberDto buyer, @SessionAttribute("id") String id) {
-        memberService.updateMember(id, buyer);
-        return new ResultDto("회원이 수정되었습니다.");
+    public ResponseEntity<ResultDto> updateMember(@CookieValue String id, @RequestBody ResponseMemberDto buyer) {
+        memberService.updateMember(id,buyer);
+        return ResponseEntity.ok(new ResultDto("회원이 수정되었습니다."));
     }
 
     /**
+     * 개발자 전유진
      * 관심 쇼핑
      * id - Member id
      */
     @GetMapping("/attenshop/{id}")
-    public List<AttenShopDto> attenShop(@PathVariable String id) {
-        List<AttenShop> byAttenShop = memberService.findByAttenShop(id);
-        List<AttenShopDto> result = byAttenShop.stream().map(o -> new AttenShopDto(o)).collect(Collectors.toList());
-        return result;
+    public ResponseEntity<List<AttenShopDto>> attenShop(@PathVariable String id) {
+        return ResponseEntity.ok(memberService.findByAttenShop(id));
     }
 
+    /**
+     * 개발자 : 전유진
+     * @param id
+     * @param pwdDto
+     * @return
+     */
     @PostMapping("changePwd/{id}")
-    public ResultDto changePwd(@PathVariable String id, @RequestBody PwdDto pwdDto) {
-        // 비밀번호 변경
-        memberService.updatePwd(id, pwdDto);
+    public ResultDto changePwd(@PathVariable String id,@RequestBody PwdDto pwdDto){
+        //비밀번호 변경
+        memberService.updatePwd(id,  pwdDto);
         return new ResultDto("비밀번호 변경하였습니다.");
 
+
     }
+
 
     @ExceptionHandler(value = RuntimeException.class)
     public ResponseEntity<ErrorResult> loginExceptionHandler(RuntimeException e) {

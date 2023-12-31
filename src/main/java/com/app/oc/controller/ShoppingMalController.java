@@ -91,22 +91,23 @@ public class ShoppingMalController {
 
     /**
      *
+     * 개발자 : 전유진
      * @param id :
-     *           ShoppingMal 상세 보기
+     *  ShoppingMal 상세 보기
      *           추후 세션으로 ID가져오기
      *
      *           OK
      */
     @GetMapping("/shopDetail")
-    public MyShoppingmalDto MyShopping(@RequestParam("id") Long id,
-            @RequestParam(defaultValue = "0", required = false) int page) {
-        // page = page == 0 ? page : page - 1;
-        PageRequest pageRequest = PageRequest.of(page, 4, Sort.by(Sort.Direction.DESC, "itemId"));
-        return shopService.findShopDetail(id, pageRequest);
+    public ResponseEntity<MyShoppingmalDto> MyShopping(@RequestParam("id") Long id, @RequestParam(defaultValue = "0",required = false) int page) {
+        page = page == 0? page : page - 1;
+        PageRequest pageRequest = PageRequest.of(page, 15, Sort.by(Sort.Direction.DESC, "itemId"));
+        return ResponseEntity.ok(shopService.findShopDetail(id,pageRequest));
     }
 
     /**
      *
+     * 개발자  전유진
      * ITem /File
      *
      * item 상세페이지 :
@@ -117,20 +118,22 @@ public class ShoppingMalController {
      * OK
      */
     @GetMapping("/item/{id}")
-    public DetailItemDto Myitem(@PathVariable Long id) {
-        return itemService.findDetailOne(id);
+    public ResponseEntity<DetailItemDto> Myitem(@PathVariable Long id) {
+        return ResponseEntity.ok(itemService.findDetailOne(id));
     }
 
     /**
+     * 개발자 : 전유진
      * item - 삭제(파일포함)
      * {id} - item의 id
-     * 
+     *
      * 로그인 세션추가작업
      */
     @DeleteMapping("/item/{id}")
-    public ResultDto ItemDelete(@PathVariable Long id) throws UnsupportedEncodingException {
+    public ResponseEntity<ResultDto> ItemDelete(@PathVariable Long id) throws UnsupportedEncodingException {
         itemService.DeleteOneItem(id);
-        return new ResultDto("삭제되었습니다.");
+        return ResponseEntity.ok(new ResultDto("삭제되었습니다."));
     }
+
 
 }

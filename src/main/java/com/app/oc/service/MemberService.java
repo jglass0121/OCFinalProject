@@ -52,13 +52,12 @@ public class MemberService {
         }
     }
 
-    // Member 1명 찾기
-    @Transactional(readOnly = true)
-    public Member findOne(String memberId) {
+    //Member 1명 찾기
+    @Transactional(readOnly=true)
+    public MemberDto findOne(String memberId) {
         Member member = memberRepository.findById(memberId)
                 .orElseThrow(() -> new IllegalArgumentException("ID가 없습니다."));
-        return member;
-
+        return new MemberDto(member);
     }
 
     @Transactional(readOnly = true)
@@ -103,10 +102,12 @@ public class MemberService {
         return member.getMemberId();
     }
 
-    // 관심 쇼핑몰
-    @Transactional(readOnly = true)
-    public List<AttenShop> findByAttenShop(String id) {
-        return attenShopRepository.findAttenShop(id);
+
+    //관심 쇼핑몰
+    @Transactional(readOnly=true)
+    public List<AttenShopDto> findByAttenShop(String id) {
+        List<AttenShop> byAttenShop = attenShopRepository.findAttenShop(id);
+        return byAttenShop.stream().map(o -> new AttenShopDto(o)).collect(Collectors.toList());
     }
 
     // 관심 아이템
