@@ -3,16 +3,10 @@ package com.app.oc.dto.mypage;
 import com.app.oc.entity.Address;
 import com.app.oc.entity.Member;
 import com.app.oc.entity.MemberRole;
-import com.app.oc.entity.ShoppingMal;
-import com.app.oc.service.MyPageShoppingMal;
-import jakarta.persistence.Embedded;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToMany;
+import com.app.oc.dto.MyPageShoppingMal;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Getter

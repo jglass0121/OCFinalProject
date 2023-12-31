@@ -1,4 +1,4 @@
-package com.app.oc.service;
+package com.app.oc.dto;
 
 import com.app.oc.entity.*;
 import jakarta.persistence.*;

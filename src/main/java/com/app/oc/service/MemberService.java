@@ -1,5 +1,6 @@
 package com.app.oc.service;
 
+import com.app.oc.dto.MyPageShoppingMal;
 import com.app.oc.dto.mypage.*;
 import com.app.oc.entity.*;
 import com.app.oc.repository.AttenShopRepository;
