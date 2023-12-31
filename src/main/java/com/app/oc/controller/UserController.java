@@ -2,14 +2,13 @@ package com.app.oc.controller;
 
 import com.app.oc.dto.ResultDto;
 import com.app.oc.dto.mypage.*;
-import com.app.oc.entity.AttenShop;
-import com.app.oc.entity.Member;
 import com.app.oc.exception.ErrorResult;
 import com.app.oc.service.MemberService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
@@ -116,7 +114,7 @@ public class UserController {
      * OK
      */
     @PutMapping("/myPage")
-    public ResponseEntity<ResultDto> updateMember(@CookieValue String id, @RequestBody ResponseMemberDto buyer) {
+    public ResponseEntity<ResultDto> updateMember(@CookieValue String id, @RequestBody RequestMemberDto buyer) {
         memberService.updateMember(id,buyer);
         return ResponseEntity.ok(new ResultDto("회원이 수정되었습니다."));
     }
@@ -138,7 +136,7 @@ public class UserController {
      * @return
      */
     @PostMapping("changePwd/{id}")
-    public ResultDto changePwd(@PathVariable String id,@RequestBody PwdDto pwdDto){
+    public ResultDto changePwd(@PathVariable String id,@Valid @RequestBody PwdDto pwdDto){
         //비밀번호 변경
         memberService.updatePwd(id,  pwdDto);
         return new ResultDto("비밀번호 변경하였습니다.");

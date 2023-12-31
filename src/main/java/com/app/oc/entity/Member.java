@@ -2,7 +2,7 @@ package com.app.oc.entity;
 
 import com.app.oc.dto.mypage.MemberDto;
 import com.app.oc.dto.mypage.MemberRequestDto;
-import com.app.oc.dto.mypage.ResponseMemberDto;
+import com.app.oc.dto.mypage.RequestMemberDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -74,7 +74,7 @@ public class Member {
      * @param member
      * @param address
      */
-    public Member update(ResponseMemberDto member, Address address) {
+    public Member update(RequestMemberDto member, Address address) {
         this.nickname = member.getNickname();
         this.phoneNm = member.getPhoneNm();
         this.address = address;

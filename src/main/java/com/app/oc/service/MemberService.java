@@ -82,7 +82,7 @@ public class MemberService {
     }
 
     // member 수정
-    public String updateMember(String id, ResponseMemberDto buyer) {
+    public String updateMember(String id, RequestMemberDto buyer) {
 
         Member buyerEntity = memberRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("ID가 없습니다."));

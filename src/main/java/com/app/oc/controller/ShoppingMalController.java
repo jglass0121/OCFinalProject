@@ -6,6 +6,7 @@ import com.app.oc.service.ItemService;
 import com.app.oc.service.ShopService;
 
 import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
@@ -82,7 +83,7 @@ public class ShoppingMalController {
      * OK
      */
     @PostMapping("/saveItem")
-    public ResponseEntity<ResultDto> SaveItem(ItemFileRequestDto itemFileRequestDto) throws IOException {
+    public ResponseEntity<ResultDto> SaveItem(@Valid ItemFileRequestDto itemFileRequestDto) throws IOException {
         //DB isert
         String name = itemService.saveItem(itemFileRequestDto);
         return ResponseEntity.ok(new ResultDto("상품이 "+name+"되었습니다."));

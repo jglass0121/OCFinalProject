@@ -1,5 +1,6 @@
 package com.app.oc.dto.mypage;
 
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
 
 /**
@@ -7,9 +8,11 @@ import lombok.Data;
  */
 
 @Data
-public class ResponseMemberDto {
+public class RequestMemberDto {
 
     private String memberId;
+    
+    @NotEmpty(message = "닉네임을 입력해주세요")
     private String nickname;
     private String phoneNm;
 
