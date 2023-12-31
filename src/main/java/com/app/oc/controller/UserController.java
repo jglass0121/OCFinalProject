@@ -114,7 +114,7 @@ public class UserController {
      * OK
      */
     @PutMapping("/myPage")
-    public ResponseEntity<ResultDto> updateMember(@CookieValue String id, @RequestBody RequestMemberDto buyer) {
+    public ResponseEntity<ResultDto> updateMember(@CookieValue String id, @Valid @RequestBody RequestMemberDto buyer) {
         memberService.updateMember(id,buyer);
         return ResponseEntity.ok(new ResultDto("회원이 수정되었습니다."));
     }
