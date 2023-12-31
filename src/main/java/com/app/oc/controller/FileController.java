@@ -6,6 +6,7 @@ import com.app.oc.service.FileService;
 import com.app.oc.util.S3Config;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,19 +24,21 @@ public class FileController {
     private final S3Config s3Component;
 
     /**
-     * 
+     *
      * Item 파일 삭제
      * 파일만 삭제되게 구분(item삭제x)
      * UploadFile : datePath , filename
      *
      * OK
      *
+     * 개발자 : 전유진
+     *
      */
 
     @DeleteMapping("/deleteFile")
-    public ResultDto FileDelete(String storeFileName) throws UnsupportedEncodingException {
+    public ResponseEntity<ResultDto> FileDelete(String storeFileName) throws UnsupportedEncodingException {
         fileService.fileOneDelete(storeFileName);
-        return new ResultDto("파일을 삭제하였습니다.");
+        return ResponseEntity.ok(new ResultDto("파일을 삭제하였습니다."));
     }
 
     /**
