@@ -1,7 +1,7 @@
 
 
 ##  프로그램명 및 간단한 소개
-프로그램명: OffClothes
+프로그램명: OffClothes (OC)
 ### 소개
 지역별 오프라인 의류 매장 소개 플랫폼.
 의류 매장을 소유한 개인 사업자들은 주변 지역 사용자들에게 매장 정보와 매장 의류 정보를 온라인으로 홍보를 할 수 있는 플렛폼이다.
@@ -34,6 +34,16 @@
  - [설계 제한 요소 반영](https://giant-tray-3aa.notion.site/c987d4701a0b47ca95be29abafc02aa0?pvs=4)
  - [API정의](https://giant-tray-3aa.notion.site/API-521154e799e9427abbc6dcf853abfffa?pvs=4)
 
+
+<details><summary style="color:skyblue"> Swagger </summary>
+
+![image](https://github.com/offclothes/backend/assets/70208747/3ab11c10-bc59-4083-a7ad-82c9beab8cf8)
+![image](https://github.com/offclothes/backend/assets/70208747/87d8a302-ad0d-4c06-930f-9b77624965e6)
+![image](https://github.com/offclothes/backend/assets/70208747/7cdedb1f-6f54-4b67-a25e-31bc3ea45b28)
+![image](https://github.com/offclothes/backend/assets/70208747/94d118a7-bcfd-400b-986c-319cf5072872)
+![image](https://github.com/offclothes/backend/assets/70208747/c8a2a821-fcec-40c2-b6fa-f4abf26926a0)
+</details>
+
 ### 설계 전체 진행 상황 
 [[OC]설계.zip](https://github.com/offclothes/backend/files/13310759/OC.zip)
 
@@ -42,13 +52,6 @@
 ![image](https://github.com/offclothes/backend/assets/70208747/5d7f1793-f6b7-4137-b51e-6d9464565e3f)
 
 
-
-## swagger 
-![image](https://github.com/offclothes/backend/assets/70208747/3ab11c10-bc59-4083-a7ad-82c9beab8cf8)
-![image](https://github.com/offclothes/backend/assets/70208747/87d8a302-ad0d-4c06-930f-9b77624965e6)
-![image](https://github.com/offclothes/backend/assets/70208747/7cdedb1f-6f54-4b67-a25e-31bc3ea45b28)
-![image](https://github.com/offclothes/backend/assets/70208747/94d118a7-bcfd-400b-986c-319cf5072872)
-![image](https://github.com/offclothes/backend/assets/70208747/c8a2a821-fcec-40c2-b6fa-f4abf26926a0)
 
 ## erd설계
 ![image](https://github.com/offclothes/backend/assets/70208747/2d4bfae7-2cec-4a13-a4d7-351c1c2d0e4e)
