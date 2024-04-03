@@ -44,9 +44,6 @@
 ![image](https://github.com/offclothes/backend/assets/70208747/c8a2a821-fcec-40c2-b6fa-f4abf26926a0)
 </details>
 
-### 설계 전체 진행 상황 
-[[OC]설계.zip](https://github.com/offclothes/backend/files/13310759/OC.zip)
-
 
 ##  시스템 구조도
 ![image](https://github.com/offclothes/backend/assets/70208747/5d7f1793-f6b7-4137-b51e-6d9464565e3f)
