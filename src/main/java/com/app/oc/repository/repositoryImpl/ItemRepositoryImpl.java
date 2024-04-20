@@ -1,4 +1,4 @@
-package com.app.oc.repositoryImpl;
+package com.app.oc.repository.repositoryImpl;
 
 import com.app.oc.dto.paging.SearchDto;
 import com.app.oc.dto.shoppingmal.MainItemDto;
