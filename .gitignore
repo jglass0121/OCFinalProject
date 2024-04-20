@@ -26,6 +26,8 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+.idea
+src/main/generated
 
 ### NetBeans ###
 /nbproject/private/
