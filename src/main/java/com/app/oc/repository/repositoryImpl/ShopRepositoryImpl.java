@@ -1,4 +1,4 @@
-package com.app.oc.repositoryImpl;
+package com.app.oc.repository.repositoryImpl;
 
 import com.app.oc.entity.Member;
 import com.app.oc.entity.ShoppingMal;

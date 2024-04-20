@@ -1,10 +1,8 @@
-package com.app.oc.repositoryImpl;
+package com.app.oc.repository.repositoryImpl;
 
 import com.app.oc.dto.paging.SearchDto;
 import com.app.oc.dto.shoppingmal.MainItemDto;
 import com.app.oc.entity.Item;
-import com.app.oc.entity.QShoppingMal;
-import com.app.oc.entity.ShoppingMal;
 import com.app.oc.repository.ItemRepositoryCustom;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -16,7 +14,6 @@ import org.springframework.data.support.PageableExecutionUtils;
 import java.util.List;
 
 import static com.app.oc.entity.QItem.item;
-import static com.app.oc.entity.QShoppingMal.shoppingMal;
 
 public class ItemRepositoryImpl implements ItemRepositoryCustom {
 
