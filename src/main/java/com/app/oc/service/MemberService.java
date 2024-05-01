@@ -70,9 +70,6 @@ public class MemberService {
 
         if (member.getRole().equals(MemberRole.SELLER)) {
             List<ShoppingMal> myShop = shopRepository.findShoppingMalByMember(memberId);
-            for (int i = 0; i < myShop.size(); i++) {
-            }
-
             List<MyPageShoppingMal> collect = myShop.stream().map(i -> new MyPageShoppingMal(i))
                     .collect(Collectors.toList());
             myPageResponse.setMyPageShoppingMal(collect);
