@@ -168,12 +168,12 @@ public class ItemService {
      */
     public DetailItemDto findDetailOne(Long id) {
         // Item
-        Item itemOne = itemRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("아이템이 없습니다."));
-        Long shopId = itemOne.getShoppingMal().getShopId();
+        Item itemAndFiles = itemRepository.findByIdWithFiles(id).orElseThrow(() -> new IllegalArgumentException("아이템이 없습니다."));
+        Long shopId = itemAndFiles.getShoppingMal().getShopId();
         ShoppingMal findShop = shopRepositroy.findById(shopId)
                 .orElseThrow(() -> new IllegalArgumentException("shop이 없습니다."));
 
-        DetailItemDto detailItemDto = new DetailItemDto(itemOne, findShop.getShopName());
+        DetailItemDto detailItemDto = new DetailItemDto(itemAndFiles, findShop.getShopName());
         String memberId = findShop.getMember().getMemberId();
 
         String sessionId = (String) session.getAttribute("id");
@@ -184,8 +184,8 @@ public class ItemService {
             detailItemDto.setMyshop(false);
         }
 
-        List<File> files = fileService.fileFindPerItem(id);
-        files.forEach(file -> itemOne.setFile(file)); // 연관관계 매핑(file)연관관계
+        List<File> files = itemAndFiles.getFiles();
+        files.forEach(file -> itemAndFiles.setFile(file)); // 연관관계 매핑(file)연관관계
 
         List list = new ArrayList<>();
         files.stream().forEach(file -> {
