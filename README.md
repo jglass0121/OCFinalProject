@@ -26,14 +26,6 @@
 - 주변 지역의 폐점, 할인점 정보 제공
 
 ## 다이어그램 및 설계
-###  [notion](https://giant-tray-3aa.notion.site/Team-OC-ea97901a989d4befb09ef106c93a37fa?pvs=4)
- - [다이어그램](https://giant-tray-3aa.notion.site/f0638ba59cf640b598e565bde4a6fc12?pvs=4)
- - [유사소프트웨어분석](https://giant-tray-3aa.notion.site/afca1a756caa4f639fa95a79beedcbc5?pvs=4)
- - [보고서 작성](https://giant-tray-3aa.notion.site/1b465bd01cc14aa3a958e02869835f84?pvs=4)
- - [요구사항 상세](https://giant-tray-3aa.notion.site/8270129b30314a98843a7b4833d98685?pvs=4)
- - [설계 제한 요소 반영](https://giant-tray-3aa.notion.site/c987d4701a0b47ca95be29abafc02aa0?pvs=4)
- - [API정의](https://giant-tray-3aa.notion.site/API-521154e799e9427abbc6dcf853abfffa?pvs=4)
-
 
 <details><summary style="color:skyblue"> Swagger </summary>
 
