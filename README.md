@@ -1,4 +1,3 @@
-![277479549-2d4bfae7-2cec-4a13-a4d7-351c1c2d0e4e](https://github.com/offclothes/finalProject/assets/70208747/670a3ace-30ce-4c4b-b8a2-8cbd0b96ac61)
 
 ##  프로그램명 및 간단한 소개
 프로그램명: OffClothes (OC)
@@ -26,6 +25,7 @@
 - 주변 지역의 폐점, 할인점 정보 제공
 
 ## 다이어그램 및 설계
+![277479549-2d4bfae7-2cec-4a13-a4d7-351c1c2d0e4e](https://github.com/offclothes/finalProject/assets/70208747/670a3ace-30ce-4c4b-b8a2-8cbd0b96ac61)
 
 <details><summary style="color:skyblue"> Swagger </summary>
 
