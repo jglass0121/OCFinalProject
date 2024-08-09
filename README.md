@@ -48,15 +48,15 @@
 ## 주요 페이지
 |메인페이지|로그인|로그아웃|회원가입|
 |-----|---|---|---|
-|<img src="https://github.com/offclothes/demo2/assets/122541575/e561f28a-9200-4385-943d-5d7670969490.png" width="150" height="70"/>|<img src="https://github.com/offclothes/demo2/assets/122541575/050e9b8e-ed9c-4b85-a5e1-dc7f0a7c34c0.png" width="150" height="70"/>|<img src="https://github.com/offclothes/demo2/assets/122541575/a3e23267-2fcc-4f72-9dc4-986dad807cb6.png" width="150" height="70"/>|<img src="https://github.com/offclothes/demo2/assets/122541575/9be7b433-c906-4106-93db-f30e6383a27c.png" width="150" height="70"/>|
+|![메인(회)](https://github.com/user-attachments/assets/d6e85190-fc85-483f-be6e-52eee96af7ae) | ![로그인](https://github.com/user-attachments/assets/a7a4e8ba-bf31-4654-b400-08343e52234b) | ![로그아웃](https://github.com/user-attachments/assets/14ae21ae-8d4e-448d-a85e-15a357c9a94e) |![회원가입](https://github.com/user-attachments/assets/76f6b269-7a7f-450c-a659-303bf70b4380)|
 
 |(검색)지역별|상품등록|상품정보|상품상세|
 |-----|---|---|---|
-|<img src="https://github.com/offclothes/demo2/assets/122541575/30a39c8a-1476-48c7-9130-f768b125c27f.png" width="150" height="70"/>|<img src="https://github.com/offclothes/demo2/assets/122541575/5d1405f7-a750-43b2-85a0-de05bedd797f.png" width="150" height="70"/>|<img src="https://github.com/offclothes/demo2/assets/122541575/b7f33ad1-7d8c-4746-9d6b-74b544e715e5.png" width="150" height="70"/>|<img src="https://github.com/offclothes/demo2/assets/122541575/dd6d491e-6c1b-465b-9774-4756f6f5091b.png" width="150" height="70"/>|
+|![지역별 상품](https://github.com/user-attachments/assets/7f1007e1-9eb0-484e-beca-4ad84dafbcf6)|![상품등록](https://github.com/user-attachments/assets/a2b6b0c2-b8fa-4981-8b48-bc7acd6938eb)|![상품정보](https://github.com/user-attachments/assets/8f16db0d-eae2-4ae7-850c-34730d93dc5c)|![상품상세페이지](https://github.com/user-attachments/assets/8dddcb19-e101-45d0-b40c-877e41d8d98d)|
 
 |할인폐점게시글|마이페이지|입점심사|쇼핑몰|
 |-----|---|---|---|
-|<img src="https://github.com/offclothes/demo2/assets/122541575/a63b9d9f-985c-4bf8-9b47-57ebf580975d.png" width="150" height="70"/>|<img src="https://github.com/offclothes/demo2/assets/122541575/4def8e08-bbae-46ea-b026-83483ffe8bcc.png" width="150" height="70"/>|<img src="https://github.com/offclothes/demo2/assets/122541575/c38128fa-64a4-4bb2-9dc5-26c45cb0cf1e.png" width="150" height="70"/>|<img src="https://github.com/offclothes/demo2/assets/122541575/f5c22037-c01f-48c7-abf7-986f86b8040e.png" width="150" height="70"/>|
+|![할인점](https://github.com/user-attachments/assets/70107064-addc-4471-b6f9-ff63b43ff409)|![마이페이지](https://github.com/user-attachments/assets/d8940d29-797c-45cf-9625-7c74331df0d7)| ![입점심사페이지](https://github.com/user-attachments/assets/f5dcdf0e-7996-4296-82cf-fe097cfbbe56)|![쇼핑몰(회원)](https://github.com/user-attachments/assets/efa13b9e-f00d-4bc0-a8e9-28a92c061b61)|
 
 
 * 스크린촬영 : 
