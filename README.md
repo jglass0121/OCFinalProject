@@ -67,5 +67,4 @@
 | 구분 | 이준호 | 강민아 | 김광명 | 두별 | 전유진 |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | Role |  Backend Developer | Frontend Developer | Frontend Developer | Backend Developer | Backend Developer | Backend Developer |
-| GitHub | [rinklove] | [mineii] | [asd45618]( | [edbyeol] | [jacomyou1026] |
 
